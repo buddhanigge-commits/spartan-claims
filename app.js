@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const duration = 2000;
       const start = performance.now();
 
+      // Reset to 0 for animation effect (HTML has real values for SEO/crawlers)
+      counter.textContent = '0';
+
       function update(now) {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
